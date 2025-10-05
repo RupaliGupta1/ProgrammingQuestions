@@ -1,0 +1,66 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    static Scanner sc;
+    // nPr = n! / (n - r). 
+    // nCr = n! / (r! * (n - r)!)
+    public static int calPermutation(){
+        System.out.println("Enter the n value ");
+        sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println("Enter the r value ");
+        sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        if(n>r)
+        {
+        return fact(n)/fact(n-r);
+        }
+        System.out.print("n should be greater than r");
+        return 0;
+
+    }
+    public static int calCombination(){
+        System.out.println("Enter the n value ");
+        sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.println("Enter the r value ");
+        sc=new Scanner(System.in);
+        int r=sc.nextInt();
+        if(n>r)
+        {
+        return fact(n)/(fact(r)*fact(n-r));
+        }
+        System.out.print("n should be greater than r");
+        return 0;
+
+    }
+  
+  public static int fact(int n)
+  {
+      int fac=1;
+      while(n>0)
+      {
+          fac=fac*n;
+          n--;
+      }
+      return fac;
+  }
+    public static void main(String[] args) {
+        System.out.println("What calculation do you wanted to perform ");
+        System.out.println("Click 1 for Combination ");
+        System.out.println("Click 2 for Permutation");
+         sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        switch(n)
+        {
+            case 2:
+                System.out.println("Permutation will be "+calPermutation());
+                break;
+            case 1:
+                System.out.println("Combination will be "+calCombination());
+            default:
+                System.out.println("Invalid option selected");
+        }
+    }
+}
