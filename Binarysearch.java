@@ -19,3 +19,34 @@ class Solution {
         return -1;
     }
 }
+
+//order agnostic BS(when we dont know the arr sorted in ascending or descending order )
+
+class Solution {
+    public int search(int[] nums, int target) {
+        int start=0;
+        int end=nums.length-1;
+        
+        while(start<=end){
+            int mid=start+(end-start)/2;   //to prevent from integer exceed scenarios
+            if(nums[mid]==target){
+                return mid;
+            }else if(start<end && target>nums[mid]){
+                start=mid+1;
+            }
+            else if(start>end && target>nums[mid]){
+                end=mid-1;
+            }
+            else if(start>end){
+                start=mid+1;
+                }
+                else{
+                end=mid-1;
+            }
+
+            
+        }
+
+        return -1;
+    }
+}
