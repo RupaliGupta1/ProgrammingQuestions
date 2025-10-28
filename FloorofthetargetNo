@@ -21,6 +21,6 @@ int findFloor(int[] arr, int target) {
         }
     }
 
-    // at the end of loop, start points to the smallest element greater than target
+    // at the end of loop, end points to the greatest element smaller than target
     return arr[end];
 }
