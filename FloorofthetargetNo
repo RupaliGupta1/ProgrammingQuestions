@@ -1,0 +1,26 @@
+Searching No which is smaller but greastes of the target no of the arr
+
+int findFloor(int[] arr, int target) {
+    int start = 0;
+    int end = arr.length - 1;
+
+    // if target > largest element, no ceiling exists
+    if (target > arr[end]) {
+        return -1; // or handle as per requirement
+    }
+
+    while (start <= end) {
+        int mid = start + (end - start) / 2;
+
+        if (arr[mid] == target) {
+            return arr[mid]; // exact match is the ceiling itself
+        } else if (arr[mid] < target) {
+            start = mid + 1; // move right
+        } else {
+            end = mid - 1; // move left
+        }
+    }
+
+    // at the end of loop, start points to the smallest element greater than target
+    return arr[end];
+}
