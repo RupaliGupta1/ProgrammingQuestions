@@ -11,6 +11,6 @@ class Solution {
                 start=mid+1;
             }
         }
-        return letters[start%letters.length];//to handle overlap condition
+        return letters[start%letters.length];//to handle overlap condition than start become 4 and length is also 4 (4%4)
     }
 }
