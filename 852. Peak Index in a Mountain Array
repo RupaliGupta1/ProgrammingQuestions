@@ -1,0 +1,22 @@
+class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        int start=0;
+        int end=arr.length-1;
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(arr[mid]>arr[mid+1]){
+                //u are in dec order of the arr
+                //this may be ans but look at left ,this is why end is != mid-1
+                end=mid;
+            }
+            else{
+                //u r in ascending part of the arr
+                start=mid+1;//bcz we know that mid+1 is greater than mid
+            }
+        }
+        //in the end==start equals to eachother bcz of two checks above and 
+        //starts and end always try to find out the max no from two checks
+        //when both points to same element that is the max no
+        return start;//can return end as well as both are in  same point
+    }
+}
