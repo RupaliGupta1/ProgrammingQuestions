@@ -21,12 +21,12 @@ class Solution {
         if(pivotNo==-1){
            return binarySearch(nums,target,0,nums.length-1);
         }
-        //if pivot, u have find out 2 ascending arr
-
         //if pivot is equal to target
         if(nums[pivotNo]==target){
             return pivotNo;
         }
+
+        //if pivot, u have find out 2 ascending array
       //if target>start element than check it from (0,pivotNo-1)
       if(target>=nums[0]){
         return binarySearch(nums,target,0,pivotNo-1);
