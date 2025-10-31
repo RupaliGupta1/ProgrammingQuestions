@@ -1,0 +1,16 @@
+// Move zero elemtn in end using Java 8 Feature.
+import java.util.*;
+import java.util.stream.*;
+
+public class Main {
+    public static void main(String[] args) {
+        List<Integer> numbers = List.of(1, 0, -2, 0, 3, 4, 0, 2, 0, -4);
+
+        List<Integer> moveZeroElement = Stream.concat(
+                numbers.stream().filter(n -> n != 0),
+                numbers.stream().filter(n -> n == 0)
+        ).collect(Collectors.toList()); // ✅ collect after concat
+
+        System.out.println(moveZeroElement);
+    }
+}
