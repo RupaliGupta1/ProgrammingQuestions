@@ -1,3 +1,4 @@
+https://youtu.be/W3OHwEZmKf0?si=GN7XJ3Rhrtun1jqz
 1: why lambda is better 
 2: what is functional interace used with lamba and explain Using Java’s Built-in Functional Interfaces with real time use cases 
 3: what is "this" keyword used for inside the lambda expression
@@ -5,10 +6,22 @@
 5: How to sort the arr alphabitically using lambda
 6: why deafult and static methods defined in java 8?
 7: diff between map and flat map?
-8: 
+8: How java time apis is better than java old date calender api?
+9: What makes a class immutable?
+10: Advantages of enum over constants?
+11: Can enum implement interface?
+12: Diff between Junit5 and Junit4?
+13: what is single responsibility principle?
+14: Purpose of the design patterns?
+15: What is valid and validated annotations?
+16: Can we have multiple controller advice?
+17: Diff between returning response entity and returning an object?
+18: Internal working of the autowired annotations?
+19: Most common annothation we used in springboot?
+20: Uncommon annotation used in springboot?
+21: How can we add a lombock to our project?
 
-
-
+Note: Learn more about stream api topics and question using Java 8 features?
 
 
 
