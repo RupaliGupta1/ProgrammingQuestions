@@ -1,0 +1,15 @@
+class Main{
+public static void main(String[] args) {
+Map<String,Integer> map=new HashMap<>();
+map.put("A",30); 
+map.put("B",20); 
+map.put("C",90); 
+map.put("D",10); 
+map.put("E",25);
+
+LinkedHashMap<String,Integer> sortedMap=map.entrySet().stream() 
+                                        .sorted(Map.Entry.comparingByValue())
+                                        .collect(Collectors .toMap(Map.Entry::getKey,Map.Entry::getValue,
+                                         (e1,e2)->e1,LinkedHashMap::new)); 
+sortedMap.forEach((key,value)-> System.out.println(key+" "+value)); }
+}
